@@ -1,0 +1,36 @@
+{
+    "name": "messaging-app",
+    "version": "1.0.0",
+    "description": "A real-time messaging app built with Node.js, Socket.IO, and MongoDB",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "keywords": [
+        "messaging",
+        "chat",
+        "nodejs",
+        "socketio",
+        "realtime",
+        "mongodb",
+        "mongoose"
+    ],
+    "author": "Abdul Hadi",
+    "license": "MIT",
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "express-rate-limit": "^7.1.5",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^7.6.1",
+        "socket.io": "^4.7.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}

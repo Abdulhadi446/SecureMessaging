@@ -1,0 +1,3 @@
+deaZzINyWXCjoE7o
+abdulhadijunaidahmedkhan
+mongodb+srv://abdulhadijunaidahmedkhan:deaZzINyWXCjoE7o@cluster0.tlbdpmj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
