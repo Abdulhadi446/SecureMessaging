@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Secure Messaging App</title>
     <script src="/socket.io/socket.io.js"></script>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/favicon.png" />
     <style>
       * {
         margin: 0;
@@ -527,8 +529,8 @@
         padding: 10px;
         display: flex;
         flex-direction: column;
-        max-height: 100vh;
-        height: 100%;
+        max-height: 75vh;
+        height: 75%;
         scroll-behavior: smooth;
         overscroll-behavior: contain;
       }
@@ -976,9 +978,8 @@
         });
 
         socket.on("user_typing", (username) => {
-          document.getElementById(
-            "typingIndicator"
-          ).textContent = `${username} is typing...`;
+          document.getElementById("typingIndicator").textContent =
+            `${username} is typing...`;
         });
 
         socket.on("user_stop_typing", () => {
@@ -1017,7 +1018,7 @@
         const time = new Date(message.timestamp).toLocaleTimeString();
         messageDiv.innerHTML = `
                 <div class="message-header">${escapeHtml(
-                  message.username
+                  message.username,
                 )} • ${time}</div>
                 <div class="message-text">${escapeHtml(message.text)}</div>
             `;
@@ -1051,7 +1052,7 @@
                       .toUpperCase()}</div>
                     <div class="user-details">
                         <div class="user-name">${escapeHtml(
-                          user.username
+                          user.username,
                         )}</div>
                         <div class="user-email">${escapeHtml(user.email)}</div>
                     </div>
